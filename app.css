@@ -1,0 +1,205 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	/* vertical-align: baseline; */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: flex;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  */
+/*  */
+/*  */
+body {
+    display: flex;
+    background: #3a6351;
+    font-family: 'Montserrat';
+    font-weight: 20px;
+    color: rgb(255, 255, 255);
+}
+/* * {
+    box-sizing: border-box;
+} */
+#container {
+        width: 1200px;
+        margin: auto;
+       }
+nav {
+    /* Important to keep the nav itmes stacking in a coloumn */
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.flip-card {
+    margin: .5em;
+    font-size: 35px;
+    /* Important! the width and height copntaines the cards */
+    /* width: .8em;     
+    height: 1.3em; */
+    width: 4.5em;
+    height: 1em;
+    text-align: center;
+    border-radius: 5px;
+}
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;;
+  }
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateX(-180deg);
+    color: rgb(255, 142, 142);
+  }
+  /* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+/* Style the back side */
+.flip-card-back {
+    color:white;
+    background-color:#ffb037;
+    transform: rotateX(180deg);
+    border-radius: 5px;
+    height: 1.2em;
+    transform: rotateX(180deg);
+    font-size: .4em;
+    padding: .5em;
+
+  }
+  .flip-card-back > a {
+      color: #fff;
+  }
+
+/* Remove underline -  The anchor tag (link) also has pseudo-classes such as visited, hover, link and active. Make sure your style is applied to the state(s) in question and that no other styles are conflicting.*/
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+.firstname{
+    font-size: 400px;
+}
+.colors {
+    color: #ffb037;
+}
+#profile-info {
+    height: 350px;
+    text-align: center;
+    padding: 50px;
+    margin-top: 60px;
+    
+}
+#profile-info > h1 {
+    font-size: 3em;
+}
+#profile-info > p {
+    font-size: 1em;
+    padding: 50px;
+    margin-bottom: 100px;
+}
+#about-page {
+    height: 400px;
+}
+#about-page h2 {
+    padding: 40px;
+    font-size: 50px;
+}
+#about-page p {
+    padding: 20px 40px;
+    font-size: .9em;
+}
+#about-img { 
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin: 6em 2em;
+    border-radius: 50%;
+}
+#container > #portfolio-page {
+    margin-top: 100px;
+    width: 1200px;
+   }
+#portfolio-page {
+    padding: 40px;
+    margin-top: 100px;
+}
+#portfolio-page h2{
+    text-align: center;
+    padding: 40px;
+    font-size: 50px;
+}
+.grid-container {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 10px 950px; /*Make the grid smaller than the container*/
+    grid-gap: 10px;
+    grid-row: 5px;
+
+    /* background-color: #2196F3; */
+}
+  
+  .grid-container > div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    text-align: start;
+}
+
+h3 {
+    padding: 40px 0 40px;
+}
+
+.notation {
+    font-size: 12px;
+    width: 500px;
+}
+#portfolio-img{
+    width: 200px;
+    border: black solid 1px;
+    border-radius: 5px;
+}
